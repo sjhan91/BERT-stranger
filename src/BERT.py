@@ -7,8 +7,8 @@ from torch import nn
 from torch.optim import AdamW
 from torch.optim.lr_scheduler import LambdaLR
 
+from .utils.vocab import *
 from einops import rearrange
-from utils.vocab import *
 from rotary_embedding_torch import RotaryEmbedding
 
 from tokenizers import Tokenizer

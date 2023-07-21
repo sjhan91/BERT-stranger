@@ -1,9 +1,9 @@
 import torch
 
-from utils.remi import REMI
-from utils.vocab import RemiVocab
-from utils.utils import chr_except_space
-from utils.utils import ord_except_space
+from .remi import REMI
+from .vocab import RemiVocab
+from .utils import chr_except_space
+from .utils import ord_except_space
 
 from tokenizers import Tokenizer
 from tokenizers.models import BPE

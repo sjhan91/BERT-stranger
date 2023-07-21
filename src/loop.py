@@ -2,14 +2,14 @@ import json
 import torch
 
 from time import time
-from BERT import BERT_Lightning
+from .BERT import BERT_Lightning
 
 from torch import nn
 from torch.nn.utils.rnn import pad_sequence
 
-from utils.vocab import *
-from utils.constants import *
-from utils.bpe_encode import MusicTokenizer
+from .utils.vocab import *
+from .utils.constants import *
+from .utils.bpe_encode import MusicTokenizer
 
 
 class BERTStranger:

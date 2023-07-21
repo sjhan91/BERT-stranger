@@ -3,7 +3,7 @@ import pretty_midi
 from torch import Tensor
 from collections import Counter
 
-from utils.constants import *
+from .constants import *
 from torchtext.vocab import vocab
 
 

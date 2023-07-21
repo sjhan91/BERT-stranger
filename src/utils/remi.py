@@ -1,9 +1,9 @@
 import numpy as np
 import pretty_midi
 
-from utils.constants import *
-from utils.remi_utils import *
-from utils.chord_recognition import MIDIChord
+from .constants import *
+from .remi_utils import *
+from .chord_recognition import MIDIChord
 
 """
 Refer to https://github.com/dvruette/figaro/blob/2b253eb0476453e197ee0599a5c58f87d82a3890/src/input_representation.py

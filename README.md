@@ -18,7 +18,7 @@ You can extract multiple loops from MIDI, which are represented as REMI+ (1 \<ba
 import torch
 
 from time import time
-from loop import BERTStranger
+from src.loop import BERTStranger
 
 # initialize model with GPU
 use_cuda = torch.cuda.is_available()

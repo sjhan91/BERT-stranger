@@ -1,5 +1,5 @@
 import numpy as np
-from utils.constants import *
+from .constants import *
 
 
 class MIDIChord(object):
