@@ -76,9 +76,7 @@ class BERTStranger:
 
         contexts = list(zip(bars[:-1], bars[1:])) + [(bars[-1], len(events))]
         contexts = [
-            (start, end)
-            if (end - start) <= (MAX_TOKEN_LEN - 1)
-            else (start, start + (MAX_TOKEN_LEN - 1))
+            (start, end) if (end - start) <= (MAX_TOKEN_LEN - 1) else (start, start + (MAX_TOKEN_LEN - 1))
             for (start, end) in contexts
         ]
 
@@ -115,10 +113,8 @@ class BERTStranger:
         P = torch.zeros(L.shape)
 
         for t in range(L.shape[0]):
-            denom = (t + 1) - torch.arange(L.shape[0])
-
-            P[t, :] = L[: t + 1, :].sum(0) / denom
-            P[t, t:] = 0
+            for l in range(t + 1):
+                P[t, l] = L[l : t + 1, l].sum(0) / (t - l + 1)
 
         # get autocorrelation function
         loop_idx = []
